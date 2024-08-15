@@ -13,7 +13,7 @@ app.use(express.json());
 
 app.use(express.urlencoded({extended:true}));
 connectDb();
-const port = 3000 || process.env.PORT;
+const port = process.env.PORT || 4000;
 
 app.use("/api/customers",Routes);
 

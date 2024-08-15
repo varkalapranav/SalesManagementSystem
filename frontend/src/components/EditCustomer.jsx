@@ -14,7 +14,7 @@ const EditCustomer = () => {
     // For example purposes, using static data
     const fetchedCustomer = async ()=>{
       try {
-        const res = await axios.get(`http://localhost:3000/api/customers/getSingle/${id}`);
+        const res = await axios.get(`http://localhost:4000/api/customers/getSingle/${id}`);
         setCustomer(res.data);
         console.log(`customer : ${customer}`);
       } catch (error) {
@@ -32,7 +32,7 @@ const EditCustomer = () => {
     e.preventDefault();
     // Submit the updated customer details
     try {
-      await axios.post(`http://localhost:3000/api/customers/editCustomer`,{
+      await axios.post(`http://localhost:4000/api/customers/editCustomer`,{
         id:id,
         changeName:customer.name,
         changeNumber:customer.number

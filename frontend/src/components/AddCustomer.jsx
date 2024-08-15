@@ -8,7 +8,7 @@ const AddCustomer = () => {
   const handleAddCustomer =async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:3000/api/customers/addCustomer',{
+      await axios.post('http://localhost:4000/api/customers/addCustomer',{
         name,
         number
       }).then(()=>{console.log('posted successfully')})

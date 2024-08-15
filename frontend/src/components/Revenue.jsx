@@ -15,7 +15,7 @@ const Revenue = () => {
 
   const fetchdata = async ()=>{
     try {
-     const res= await axios.get('http://localhost:3000/api/customers/getcust')
+     const res= await axios.get('http://localhost:4000/api/customers/getcust')
       
         setCustomers(res.data);
         console.log(customers);

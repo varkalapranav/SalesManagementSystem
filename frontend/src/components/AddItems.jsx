@@ -27,7 +27,7 @@ const AddItems = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const res = await axios.post(`http://localhost:3000/api/customers/updateCustomer/${id}`,{
+      const res = await axios.post(`http://localhost:4000/api/customers/updateCustomer/${id}`,{
         items:items
       },{
         headers: {

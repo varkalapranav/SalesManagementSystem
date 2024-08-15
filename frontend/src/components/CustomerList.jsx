@@ -23,7 +23,7 @@ const CustomerList = () => {
 
   const fetchdata = async ()=>{
     try {
-     const res= await axios.get('http://localhost:3000/api/customers/getcust')
+     const res= await axios.get('http://localhost:4000/api/customers/getcust')
       
         setCustomers(res.data);
         console.log(customers);
@@ -36,7 +36,7 @@ const CustomerList = () => {
 
   const fetchreqdata = async () => {
     try {
-      const res = await axios.get(`http://localhost:3000/api/customers/getSingle/${selectedCustomerId}`);
+      const res = await axios.get(`http://localhost:4000/api/customers/getSingle/${selectedCustomerId}`);
       console.log(res.data.items);
       setRenderedItems(res.data.items);
       const totalBalance = res.data.items.reduce((sum, item) => sum + item.balanceAmount, 0);
@@ -57,7 +57,7 @@ const CustomerList = () => {
   const handleDelete = async (id) => {
     // Add logic to delete the customer
     try{
-      await axios.delete(`http://localhost:3000/api/customers/delete/${id}`);
+      await axios.delete(`http://localhost:4000/api/customers/delete/${id}`);
 
       // setCustomers(customers.filter((customer) => customer.id !== id));
       fetchdata();

@@ -23,7 +23,7 @@ const CustomerDetail = () => {
   useEffect(()=>{
     const fetchdataByid = async () => {
       try {
-        const res = await axios.get(`http://localhost:3000/api/customers/getSingle/${id}`);
+        const res = await axios.get(`http://localhost:4000/api/customers/getSingle/${id}`);
         setcustomer(res.data);
         setTransactions(res.data.items);
         console.log(transactions);

@@ -19,7 +19,7 @@ const Modal = ({ items, isOpen, onClose, onPaymentSubmit ,customerId}) => {
       if (amount && items[index]) {
         try {
           // Send the payment update request to the backend
-          await axios.post(`http://localhost:3000/api/customers/addBalance`, {
+          await axios.post(`http://localhost:4000/api/customers/addBalance`, {
             customerId: customerId,
             itemId: items[index]._id,
             paymentAmount: amount,
